@@ -157,3 +157,32 @@ p, li, span {
 .faqs {
     text-align: center;
 }
+
+
+// MEDIAS QUERYS 
+@media screen and (min-width: 768px) and (max-width: 990px) {
+    .hero {
+        width: 30vw;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .separar {
+        gap: 3rem !important;
+    }
+}
+
+
+@media screen and (max-width: 428px) {
+    .separar {
+        gap: 3rem !important;
+    }
+
+    .hero {
+        width: 80vw;
+    }
+
+    .info {
+        margin: 3rem 0 3rem 0 !important;
+    }
+}
