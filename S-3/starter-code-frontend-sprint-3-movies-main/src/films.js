@@ -95,21 +95,21 @@ function hoursToMinutes(movies) {
 }
 
 
-// // Exercise 8: Get the best film of a year
-// function bestFilmOfYear(movies, year) {
-//   let result = [];
-//   let peliculasAño = movies.filter(movie => movie.year === year);
+// Exercise 8: Get the best film of a year
+function bestFilmOfYear(movies, year) {
+  let result = [];
+  let peliculasAño = movies.filter(movie => movie.year === year);
 
-//   if (peliculasAño.length === 0) {
-//     return `No hay películas registradas en el año ${year}.`;
-//   }
-//   let mejorPelicula = peliculasAño.reduce((best, current) => {
-//     return current.score > best.score ? current : best;
-//   });
-//   result.push(mejorPelicula);
-//   console.log(`La mejor película del año ${year} es: ${mejorPelicula.title}`);
-//   return res;
-// }
+  if (peliculasAño.length === 0) {
+    return `No hay películas registradas en el año ${year}.`;
+  }
+  let mejorPelicula = peliculasAño.reduce((best, current) => {
+    return current.score > best.score ? current : best;
+  });
+  result.push(mejorPelicula);
+  console.log(`La mejor película del año ${year} es: ${mejorPelicula.title}`);
+  return res;
+}
 
 
 // The following is required to make unit tests work.
