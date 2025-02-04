@@ -291,12 +291,32 @@ describe('Function "orderByYear"', () => {
 });
 
 // Exercise 6
-// YOUR CODE HERE. Test moviesAverageByCategory()
-describe('Function "moviesAverageByCategory"', () => {
-  it('ADD YOUR CODE IN films.spec.js file', () => {
-    expect(typeof hoursToMinutes).toBe('coffee');
+// YOUR CODE HERE. Test moviesAverageByCategory()// Exercise 6: Test for moviesAverageByCategorydescribe('Function "moviesAverageByCategory"', () => {
+  // Datos de prueba
+  const mockMovies = [
+    { title: "Movie 1", genre: ["Action", "Drama"], score: 8 },
+    { title: "Movie 2", genre: ["Comedy"], score: 7.5 },
+    { title: "Movie 3", genre: ["Action"], score: 9 },
+    { title: "Movie 4", genre: ["Drama"], score: null },
+  ];
+
+  it("should return the correct average score for a given category", () => {
+    const actionAverage = moviesAverageByCategory.call({ movies: mockMovies }, "Action");
+    // Verificamos que el promedio para "Action" sea correcto
+    expect(actionAverage).toBe(8.5); // (8 + 9) / 2
   });
-});
+
+  it("should return 0 if no movies are found in the given category", () => {
+    const fantasyAverage = moviesAverageByCategory.call({ movies: mockMovies }, "Fantasy");
+    // No hay películas en "Fantasy", debe devolver 0
+    expect(fantasyAverage).toBe(0);
+  });
+
+  it("should exclude movies without a score when calculating the average", () => {
+    const dramaAverage = moviesAverageByCategory.call({ movies: mockMovies }, "Drama");
+    // Excluye las películas sin puntuación, calcula solo las válidas
+    expect(dramaAverage).toBe(8); // (8) / 1
+  });
 
 // Exercise 7
 describe('Function "hoursToMinutes"', () => {
