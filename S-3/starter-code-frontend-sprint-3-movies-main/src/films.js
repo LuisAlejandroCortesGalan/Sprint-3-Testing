@@ -73,26 +73,26 @@ function moviesAverageByCategory(category) {
 
 
 
-// // Exercise 7: Modify the duration of movies to minutes
-// function hoursToMinutes(movies) {
-//   return movies.map(movie => {
-//     const duration = movie.duration;
-//     let totalMinutes = 0;
+// Exercise 7: Modify the duration of movies to minutes
+function hoursToMinutes(movies) {
+  return movies.map(movie => {
+    const duration = movie.duration;
+    let totalMinutes = 0;
 
-//     if (duration.includes('h')) {
-//       const [hoursStr, minutesStr] = duration.split('h');
-//       const hours = parseInt(hoursStr.trim(), 10) || 0;
-//       const minutes = parseInt(minutesStr?.replace('min', '').trim(), 10) || 0;
-//       totalMinutes = hours * 60 + minutes;
-//     } else if (duration.includes('min')) {
-//       totalMinutes = parseInt(duration.replace('min', '').trim(), 10);
-//     }
-//     return {
-//       ...movie, // Copia todas las propiedades de la película original
-//       duration: totalMinutes, // Reemplaza el campo duration con minutos
-//     };
-//   });
-// }
+    if (duration.includes('h')) {
+      const [hoursStr, minutesStr] = duration.split('h');
+      const hours = parseInt(hoursStr.trim(), 10) || 0;
+      const minutes = parseInt(minutesStr?.replace('min', '').trim(), 10) || 0;
+      totalMinutes = hours * 60 + minutes;
+    } else if (duration.includes('min')) {
+      totalMinutes = parseInt(duration.replace('min', '').trim(), 10);
+    }
+    return {
+      ...movie, // Copia todas las propiedades de la película original
+      duration: totalMinutes, // Reemplaza el campo duration con minutos
+    };
+  });
+}
 
 
 // // Exercise 8: Get the best film of a year
