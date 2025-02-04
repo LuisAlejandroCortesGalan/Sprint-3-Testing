@@ -14,21 +14,21 @@ function getMoviesFromDirector(array, director) {
   return result;
 }
 
-// // Exercise 3: Calculate the average of the films of a given director
-// function moviesAverageOfDirector(array, director) {
-//   let result = array.filter(item => item.director === director);
-//   if (result.length === 0) {
-//     console.log(`No movies found for director: ${director}`);
-//     return 0; 
-//   }
+// Exercise 3: Calculate the average of the films of a given director
+function moviesAverageOfDirector(array, director) {
+  let result = array.filter(item => item.director === director);
+  if (result.length === 0) {
+    console.log(`No movies found for director: ${director}`);
+    return 0; 
+  }
 
-//   let totalScore = result.reduce((acc, item) => acc + item.score, 0);
+  let totalScore = result.reduce((acc, item) => acc + item.score, 0);
 
-//   let average = (totalScore / result.length).toFixed(2);
+  let average = (totalScore / result.length).toFixed(2);
 
-//   console.log(`Average score of movies by ${director}: ${average}`);
-//   return parseFloat(average); 
-// }
+  console.log(`Average score of movies by ${director}: ${average}`);
+  return parseFloat(average); 
+}
 
 
 // // Exercise 4:  Alphabetic order by title 
