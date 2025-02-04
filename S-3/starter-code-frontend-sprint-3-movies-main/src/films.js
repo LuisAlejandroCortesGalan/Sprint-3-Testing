@@ -41,20 +41,20 @@ function orderAlphabetically(array) {
 
 }
 
-// // Exercise 5: Order by year, ascending
-// function orderByYear(movies) {
-//   if (!Array.isArray(movies)) {
-//     throw new Error("Input debe ser un array");
-//   }
-//   const moviesCopy = [...movies];
+// Exercise 5: Order by year, ascending
+function orderByYear(movies) {
+  if (!Array.isArray(movies)) {
+    throw new Error("Input debe ser un array");
+  }
+  const moviesCopy = [...movies];
 
-//   return moviesCopy.sort((a, b) => {
-//     if (a.year === b.year) {
-//       return a.title.localeCompare(b.title); 
-//     }
-//     return a.year - b.year; 
-//   });
-// }
+  return moviesCopy.sort((a, b) => {
+    if (a.year === b.year) {
+      return a.title.localeCompare(b.title); 
+    }
+    return a.year - b.year; 
+  });
+}
 
 
 // Exercise 6: Calculate the average of the movies in a category
